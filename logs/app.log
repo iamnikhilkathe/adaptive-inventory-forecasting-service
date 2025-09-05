@@ -1,0 +1,1156 @@
+2025-08-23 14:59:43.362 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 14:59:43.362 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [217a8a8f-7233-458e-a4b6-640fc01ead12]
+2025-08-23 14:59:43.362 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 14:59:43.362 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/3]
+2025-08-23 14:59:43.362 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 14:59:43.362 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T14:59:43.361082500]
+2025-08-23 14:59:43.362 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 14:59:43.374 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2025-08-23 14:59:43.374 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+2025-08-23 14:59:43.379 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    left join
+        products p1_0 
+            on p1_0.id=f1_0.product_id 
+    where
+        p1_0.id=? 
+    order by
+        f1_0.forecast_date desc 
+    limit
+        ?
+2025-08-23 14:59:43.379 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+2025-08-23 14:59:43.379 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2025-08-23 14:59:43.387 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 14:59:43.387 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [217a8a8f-7233-458e-a4b6-640fc01ead12]
+2025-08-23 14:59:43.387 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 200]
+2025-08-23 14:59:43.387 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/3]
+2025-08-23 14:59:43.387 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 14:59:43.388 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T14:59:43.386082700]
+2025-08-23 14:59:43.388 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:01:38.380 DEBUG [http-nio-8080-exec-5] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:01:38.380 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [2a46fe55-ae7c-4a35-be3d-38e32701bf17]
+2025-08-23 15:01:38.380 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 15:01:38.380 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/3]
+2025-08-23 15:01:38.380 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 15:01:38.380 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:01:38.379954600]
+2025-08-23 15:01:38.380 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:01:38.384 DEBUG [http-nio-8080-exec-5] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2025-08-23 15:01:38.385 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+2025-08-23 15:01:38.387 DEBUG [http-nio-8080-exec-5] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    left join
+        products p1_0 
+            on p1_0.id=f1_0.product_id 
+    where
+        p1_0.id=? 
+    order by
+        f1_0.forecast_date desc 
+    limit
+        ?
+2025-08-23 15:01:38.387 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+2025-08-23 15:01:38.387 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2025-08-23 15:01:38.389 DEBUG [http-nio-8080-exec-5] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:01:38.389 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [2a46fe55-ae7c-4a35-be3d-38e32701bf17]
+2025-08-23 15:01:38.389 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 200]
+2025-08-23 15:01:38.389 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/3]
+2025-08-23 15:01:38.389 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 15:01:38.389 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:01:38.388945600]
+2025-08-23 15:01:38.389 TRACE [http-nio-8080-exec-5] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:01:39.139 DEBUG [http-nio-8080-exec-7] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:01:39.139 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [bcb837e5-68ba-4b83-997e-5889870d402a]
+2025-08-23 15:01:39.139 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 15:01:39.139 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/3]
+2025-08-23 15:01:39.139 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 15:01:39.139 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:01:39.138788100]
+2025-08-23 15:01:39.139 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:01:39.143 DEBUG [http-nio-8080-exec-7] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2025-08-23 15:01:39.143 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+2025-08-23 15:01:39.145 DEBUG [http-nio-8080-exec-7] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    left join
+        products p1_0 
+            on p1_0.id=f1_0.product_id 
+    where
+        p1_0.id=? 
+    order by
+        f1_0.forecast_date desc 
+    limit
+        ?
+2025-08-23 15:01:39.145 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+2025-08-23 15:01:39.145 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2025-08-23 15:01:39.147 DEBUG [http-nio-8080-exec-7] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:01:39.148 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [bcb837e5-68ba-4b83-997e-5889870d402a]
+2025-08-23 15:01:39.148 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 200]
+2025-08-23 15:01:39.148 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/3]
+2025-08-23 15:01:39.148 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 15:01:39.148 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:01:39.147787600]
+2025-08-23 15:01:39.148 TRACE [http-nio-8080-exec-7] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:02:34.425 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:02:34.425 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [da8b13f0-9da4-42ce-b2c2-8ac0130fc111]
+2025-08-23 15:02:34.425 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 15:02:34.425 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [POST /api/sales]
+2025-08-23 15:02:34.425 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 15:02:34.425 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:02:34.424014100]
+2025-08-23 15:02:34.425 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:02:34.449 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2025-08-23 15:02:34.449 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.452 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        sales
+        (sale_date, product_id, quantity) 
+    values
+        (?, ?, ?)
+2025-08-23 15:02:34.452 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-22]
+2025-08-23 15:02:34.452 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+2025-08-23 15:02:34.452 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:INTEGER) <- [90]
+2025-08-23 15:02:34.458 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    update
+        products 
+    set
+        category=?,
+        current_stock=?,
+        lead_time_days=?,
+        name=?,
+        reorder_threshold=? 
+    where
+        id=?
+2025-08-23 15:02:34.459 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Electronics]
+2025-08-23 15:02:34.459 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [30]
+2025-08-23 15:02:34.459 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:INTEGER) <- [7]
+2025-08-23 15:02:34.459 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Widget A]
+2025-08-23 15:02:34.459 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:INTEGER) <- [30]
+2025-08-23 15:02:34.459 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [2]
+2025-08-23 15:02:34.468 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.sale_date,
+        s1_0.product_id,
+        s1_0.quantity 
+    from
+        sales s1_0 
+    where
+        s1_0.product_id=? 
+        and s1_0.sale_date between ? and ?
+2025-08-23 15:02:34.468 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.468 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-16]
+2025-08-23 15:02:34.468 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:DATE) <- [2025-08-23]
+2025-08-23 15:02:34.471 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:02:34.471 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.471 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-24]
+2025-08-23 15:02:34.472 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        forecasts
+        (forecast_date, expected_demand, product_id, projected_stock) 
+    values
+        (?, ?, ?, ?)
+2025-08-23 15:02:34.472 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-24]
+2025-08-23 15:02:34.472 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [12]
+2025-08-23 15:02:34.472 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:02:34.472 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [18]
+2025-08-23 15:02:34.474 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:02:34.474 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.474 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-25]
+2025-08-23 15:02:34.475 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        forecasts
+        (forecast_date, expected_demand, product_id, projected_stock) 
+    values
+        (?, ?, ?, ?)
+2025-08-23 15:02:34.475 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-25]
+2025-08-23 15:02:34.475 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [12]
+2025-08-23 15:02:34.475 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:02:34.475 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [6]
+2025-08-23 15:02:34.476 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:02:34.477 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.477 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-26]
+2025-08-23 15:02:34.478 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        forecasts
+        (forecast_date, expected_demand, product_id, projected_stock) 
+    values
+        (?, ?, ?, ?)
+2025-08-23 15:02:34.478 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-26]
+2025-08-23 15:02:34.478 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [12]
+2025-08-23 15:02:34.478 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:02:34.478 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:02:34.479 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:02:34.479 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.479 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-27]
+2025-08-23 15:02:34.480 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        forecasts
+        (forecast_date, expected_demand, product_id, projected_stock) 
+    values
+        (?, ?, ?, ?)
+2025-08-23 15:02:34.480 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-27]
+2025-08-23 15:02:34.480 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [12]
+2025-08-23 15:02:34.480 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:02:34.481 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:02:34.482 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:02:34.482 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.482 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-28]
+2025-08-23 15:02:34.483 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        forecasts
+        (forecast_date, expected_demand, product_id, projected_stock) 
+    values
+        (?, ?, ?, ?)
+2025-08-23 15:02:34.483 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-28]
+2025-08-23 15:02:34.483 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [12]
+2025-08-23 15:02:34.483 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:02:34.483 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:02:34.485 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:02:34.485 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.485 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-29]
+2025-08-23 15:02:34.486 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        forecasts
+        (forecast_date, expected_demand, product_id, projected_stock) 
+    values
+        (?, ?, ?, ?)
+2025-08-23 15:02:34.486 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-29]
+2025-08-23 15:02:34.486 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [12]
+2025-08-23 15:02:34.486 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:02:34.486 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:02:34.487 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:02:34.488 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:34.488 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-30]
+2025-08-23 15:02:34.488 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        forecasts
+        (forecast_date, expected_demand, product_id, projected_stock) 
+    values
+        (?, ?, ?, ?)
+2025-08-23 15:02:34.489 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-30]
+2025-08-23 15:02:34.489 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [12]
+2025-08-23 15:02:34.489 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:02:34.489 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:02:34.494 DEBUG [http-nio-8080-exec-9] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:02:34.494 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [da8b13f0-9da4-42ce-b2c2-8ac0130fc111]
+2025-08-23 15:02:34.494 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 201]
+2025-08-23 15:02:34.494 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [POST /api/sales]
+2025-08-23 15:02:34.494 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 15:02:34.494 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:02:34.493014600]
+2025-08-23 15:02:34.494 TRACE [http-nio-8080-exec-9] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:02:42.670 DEBUG [http-nio-8080-exec-10] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:02:42.670 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [cda12921-5d93-4573-a5e4-2e4f89b7115a]
+2025-08-23 15:02:42.670 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 15:02:42.670 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/2]
+2025-08-23 15:02:42.670 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 15:02:42.670 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:02:42.669367500]
+2025-08-23 15:02:42.670 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:02:42.674 DEBUG [http-nio-8080-exec-10] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2025-08-23 15:02:42.674 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:42.676 DEBUG [http-nio-8080-exec-10] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    left join
+        products p1_0 
+            on p1_0.id=f1_0.product_id 
+    where
+        p1_0.id=? 
+    order by
+        f1_0.forecast_date desc 
+    limit
+        ?
+2025-08-23 15:02:42.676 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:02:42.676 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2025-08-23 15:02:42.678 DEBUG [http-nio-8080-exec-10] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:02:42.679 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [cda12921-5d93-4573-a5e4-2e4f89b7115a]
+2025-08-23 15:02:42.679 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 200]
+2025-08-23 15:02:42.679 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/2]
+2025-08-23 15:02:42.679 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 15:02:42.679 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:02:42.678367600]
+2025-08-23 15:02:42.679 TRACE [http-nio-8080-exec-10] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:03:11.025 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:03:11.025 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [e245a39b-f818-44c7-90ac-ecefa4efd2c8]
+2025-08-23 15:03:11.025 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 15:03:11.025 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [POST /api/sales]
+2025-08-23 15:03:11.025 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 15:03:11.025 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:03:11.024596500]
+2025-08-23 15:03:11.025 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:03:11.029 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2025-08-23 15:03:11.030 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.031 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        sales
+        (sale_date, product_id, quantity) 
+    values
+        (?, ?, ?)
+2025-08-23 15:03:11.031 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-23]
+2025-08-23 15:03:11.032 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+2025-08-23 15:03:11.032 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:INTEGER) <- [5]
+2025-08-23 15:03:11.033 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        products 
+    set
+        category=?,
+        current_stock=?,
+        lead_time_days=?,
+        name=?,
+        reorder_threshold=? 
+    where
+        id=?
+2025-08-23 15:03:11.033 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Electronics]
+2025-08-23 15:03:11.033 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [25]
+2025-08-23 15:03:11.033 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:INTEGER) <- [7]
+2025-08-23 15:03:11.033 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Widget A]
+2025-08-23 15:03:11.033 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:INTEGER) <- [30]
+2025-08-23 15:03:11.033 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [2]
+2025-08-23 15:03:11.036 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.sale_date,
+        s1_0.product_id,
+        s1_0.quantity 
+    from
+        sales s1_0 
+    where
+        s1_0.product_id=? 
+        and s1_0.sale_date between ? and ?
+2025-08-23 15:03:11.036 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.036 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-16]
+2025-08-23 15:03:11.036 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:DATE) <- [2025-08-23]
+2025-08-23 15:03:11.038 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:03:11.038 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.038 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-24]
+2025-08-23 15:03:11.040 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        forecasts 
+    set
+        forecast_date=?,
+        expected_demand=?,
+        product_id=?,
+        projected_stock=? 
+    where
+        id=?
+2025-08-23 15:03:11.040 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-24]
+2025-08-23 15:03:11.040 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [13]
+2025-08-23 15:03:11.040 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:03:11.040 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [12]
+2025-08-23 15:03:11.040 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [15]
+2025-08-23 15:03:11.041 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:03:11.041 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.041 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-25]
+2025-08-23 15:03:11.043 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        forecasts 
+    set
+        forecast_date=?,
+        expected_demand=?,
+        product_id=?,
+        projected_stock=? 
+    where
+        id=?
+2025-08-23 15:03:11.043 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-25]
+2025-08-23 15:03:11.043 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [13]
+2025-08-23 15:03:11.043 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:03:11.043 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:03:11.043 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [16]
+2025-08-23 15:03:11.043 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:03:11.043 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.043 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-26]
+2025-08-23 15:03:11.045 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        forecasts 
+    set
+        forecast_date=?,
+        expected_demand=?,
+        product_id=?,
+        projected_stock=? 
+    where
+        id=?
+2025-08-23 15:03:11.045 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-26]
+2025-08-23 15:03:11.045 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [13]
+2025-08-23 15:03:11.045 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:03:11.045 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:03:11.045 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [17]
+2025-08-23 15:03:11.046 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:03:11.046 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.046 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-27]
+2025-08-23 15:03:11.047 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        forecasts 
+    set
+        forecast_date=?,
+        expected_demand=?,
+        product_id=?,
+        projected_stock=? 
+    where
+        id=?
+2025-08-23 15:03:11.048 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-27]
+2025-08-23 15:03:11.048 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [13]
+2025-08-23 15:03:11.048 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:03:11.048 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:03:11.048 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [18]
+2025-08-23 15:03:11.048 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:03:11.048 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.049 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-28]
+2025-08-23 15:03:11.050 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        forecasts 
+    set
+        forecast_date=?,
+        expected_demand=?,
+        product_id=?,
+        projected_stock=? 
+    where
+        id=?
+2025-08-23 15:03:11.051 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-28]
+2025-08-23 15:03:11.051 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [13]
+2025-08-23 15:03:11.051 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:03:11.051 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:03:11.051 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [19]
+2025-08-23 15:03:11.051 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:03:11.051 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.051 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-29]
+2025-08-23 15:03:11.053 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        forecasts 
+    set
+        forecast_date=?,
+        expected_demand=?,
+        product_id=?,
+        projected_stock=? 
+    where
+        id=?
+2025-08-23 15:03:11.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-29]
+2025-08-23 15:03:11.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [13]
+2025-08-23 15:03:11.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:03:11.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:03:11.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [20]
+2025-08-23 15:03:11.054 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:03:11.054 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:11.054 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-30]
+2025-08-23 15:03:11.055 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        forecasts 
+    set
+        forecast_date=?,
+        expected_demand=?,
+        product_id=?,
+        projected_stock=? 
+    where
+        id=?
+2025-08-23 15:03:11.055 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-30]
+2025-08-23 15:03:11.055 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [13]
+2025-08-23 15:03:11.055 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:03:11.055 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [0]
+2025-08-23 15:03:11.055 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [21]
+2025-08-23 15:03:11.058 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:03:11.059 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [e245a39b-f818-44c7-90ac-ecefa4efd2c8]
+2025-08-23 15:03:11.059 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 201]
+2025-08-23 15:03:11.059 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [POST /api/sales]
+2025-08-23 15:03:11.059 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 15:03:11.059 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:03:11.058598900]
+2025-08-23 15:03:11.059 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:03:14.138 DEBUG [http-nio-8080-exec-3] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:03:14.138 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [f66bf2cc-8cb1-4c4c-b310-8156e219cfcd]
+2025-08-23 15:03:14.138 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 15:03:14.138 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/2]
+2025-08-23 15:03:14.138 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 15:03:14.138 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:03:14.137812300]
+2025-08-23 15:03:14.138 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:03:14.142 DEBUG [http-nio-8080-exec-3] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2025-08-23 15:03:14.142 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:14.143 DEBUG [http-nio-8080-exec-3] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    left join
+        products p1_0 
+            on p1_0.id=f1_0.product_id 
+    where
+        p1_0.id=? 
+    order by
+        f1_0.forecast_date desc 
+    limit
+        ?
+2025-08-23 15:03:14.144 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:14.144 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2025-08-23 15:03:14.146 DEBUG [http-nio-8080-exec-3] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:03:14.146 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [f66bf2cc-8cb1-4c4c-b310-8156e219cfcd]
+2025-08-23 15:03:14.146 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 200]
+2025-08-23 15:03:14.146 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [GET /api/products/2]
+2025-08-23 15:03:14.146 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 15:03:14.146 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:03:14.145813500]
+2025-08-23 15:03:14.146 TRACE [http-nio-8080-exec-3] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:03:31.919 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:03:31.920 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [0d80d103-0495-4b02-b762-a3611ee3e9c0]
+2025-08-23 15:03:31.920 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 15:03:31.920 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [POST /api/orders/auto]
+2025-08-23 15:03:31.920 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 15:03:31.920 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:03:31.918034]
+2025-08-23 15:03:31.920 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:03:31.943 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.current_stock<=p1_0.reorder_threshold
+2025-08-23 15:03:31.945 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.sale_date,
+        s1_0.product_id,
+        s1_0.quantity 
+    from
+        sales s1_0 
+    where
+        s1_0.product_id=? 
+        and s1_0.sale_date between ? and ?
+2025-08-23 15:03:31.945 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:03:31.945 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-16]
+2025-08-23 15:03:31.945 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:DATE) <- [2025-08-23]
+2025-08-23 15:03:31.947 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        purchase_orders
+        (actual_arrival_date, expected_arrival_date, order_date, product_id, quantity_ordered, status) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:03:31.947 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [null]
+2025-08-23 15:03:31.947 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-30]
+2025-08-23 15:03:31.947 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:DATE) <- [2025-08-23]
+2025-08-23 15:03:31.947 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:BIGINT) <- [2]
+2025-08-23 15:03:31.947 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:INTEGER) <- [101]
+2025-08-23 15:03:31.947 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [PENDING]
+2025-08-23 15:03:31.953 DEBUG [http-nio-8080-exec-2] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:03:31.953 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [0d80d103-0495-4b02-b762-a3611ee3e9c0]
+2025-08-23 15:03:31.953 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 200]
+2025-08-23 15:03:31.953 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [POST /api/orders/auto]
+2025-08-23 15:03:31.953 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 15:03:31.953 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:03:31.953034]
+2025-08-23 15:03:31.954 TRACE [http-nio-8080-exec-2] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:07:23.962 INFO  [RMI TCP Connection(15)-127.0.0.1] trace= user= o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-08-23 15:07:23.963 INFO  [RMI TCP Connection(15)-127.0.0.1] trace= user= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-23 15:07:23.964 INFO  [tomcat-shutdown] trace= user= o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-08-23 15:07:24.167 INFO  [tomcat-shutdown] trace= user= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-23 15:07:24.168 INFO  [RMI TCP Connection(15)-127.0.0.1] trace= user= o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-08-23 15:07:24.178 INFO  [RMI TCP Connection(15)-127.0.0.1] trace= user= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23 15:07:24.179 INFO  [RMI TCP Connection(15)-127.0.0.1] trace= user= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-23 15:07:24.182 INFO  [RMI TCP Connection(15)-127.0.0.1] trace= user= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-23 15:07:25.532 INFO  [background-preinit] trace= user= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-23 15:07:25.564 INFO  [main] trace= user= c.n.i.a.AdaptiveInventoryForecastingServiceApplication - Starting AdaptiveInventoryForecastingServiceApplication using Java 17 with PID 24676 (C:\Users\Administrator\Desktop\JAVA_INTERVIEW_PROJECT\adaptive-inventory-forecasting-service\target\classes started by Administrator in C:\Users\Administrator\Desktop\JAVA_INTERVIEW_PROJECT\adaptive-inventory-forecasting-service)
+2025-08-23 15:07:25.565 INFO  [main] trace= user= c.n.i.a.AdaptiveInventoryForecastingServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-23 15:07:26.004 INFO  [main] trace= user= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-23 15:07:26.093 INFO  [main] trace= user= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 6 JPA repository interfaces.
+2025-08-23 15:07:26.394 INFO  [main] trace= user= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-23 15:07:26.401 INFO  [main] trace= user= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-23 15:07:26.402 INFO  [main] trace= user= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-23 15:07:26.403 INFO  [main] trace= user= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-23 15:07:26.435 INFO  [main] trace= user= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-23 15:07:26.435 INFO  [main] trace= user= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 848 ms
+2025-08-23 15:07:26.543 INFO  [main] trace= user= o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-23 15:07:26.568 INFO  [main] trace= user= org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-23 15:07:26.585 INFO  [main] trace= user= o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-23 15:07:26.711 INFO  [main] trace= user= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-23 15:07:26.726 INFO  [main] trace= user= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-23 15:07:26.808 INFO  [main] trace= user= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fcc0a1
+2025-08-23 15:07:26.809 INFO  [main] trace= user= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-23 15:07:26.853 INFO  [main] trace= user= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-23 15:07:26.856 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@aa23f11) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@65a80fdb)
+2025-08-23 15:07:26.857 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@79e90571) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7d551ec6)
+2025-08-23 15:07:26.857 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6614ecca) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@43e7f104)
+2025-08-23 15:07:26.857 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7294a684) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2762253e)
+2025-08-23 15:07:26.857 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6651efa4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1ac25dbb)
+2025-08-23 15:07:26.857 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4db568e1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7bc8ffbc)
+2025-08-23 15:07:26.857 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@120d13ae) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1aaaabd1)
+2025-08-23 15:07:26.857 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7cbe3a05) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@40b70f31)
+2025-08-23 15:07:26.857 DEBUG [main] trace= user= o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3adde4ea) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@75663443)
+2025-08-23 15:07:27.324 INFO  [main] trace= user= o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-23 15:07:27.351 DEBUG [main] trace= user= org.hibernate.SQL - 
+    alter table purchase_orders 
+       modify column status enum ('PENDING','RECEIVED') not null
+2025-08-23 15:07:27.378 INFO  [main] trace= user= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23 15:07:27.545 INFO  [main] trace= user= o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-23 15:07:27.859 INFO  [main] trace= user= o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-08-23 15:07:27.871 WARN  [main] trace= user= o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-23 15:07:28.146 INFO  [main] trace= user= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-08-23 15:07:28.155 INFO  [main] trace= user= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-23 15:07:28.160 INFO  [main] trace= user= c.n.i.a.AdaptiveInventoryForecastingServiceApplication - Started AdaptiveInventoryForecastingServiceApplication in 2.889 seconds (process running for 3.19)
+2025-08-23 15:07:45.983 INFO  [http-nio-8080-exec-1] trace= user= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-23 15:07:45.983 INFO  [http-nio-8080-exec-1] trace= user= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-23 15:07:45.984 INFO  [http-nio-8080-exec-1] trace= user= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-23 15:07:46.051 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:07:46.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [37c3b27f-532e-452e-8bda-83428645c7de]
+2025-08-23 15:07:46.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Params: null]
+2025-08-23 15:07:46.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [POST /api/sales]
+2025-08-23 15:07:46.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_REQUEST]
+2025-08-23 15:07:46.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:07:46.033061300]
+2025-08-23 15:07:46.053 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:07:46.125 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.category,
+        p1_0.current_stock,
+        p1_0.lead_time_days,
+        p1_0.name,
+        p1_0.reorder_threshold 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2025-08-23 15:07:46.126 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.134 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        sales
+        (sale_date, product_id, quantity) 
+    values
+        (?, ?, ?)
+2025-08-23 15:07:46.134 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-24]
+2025-08-23 15:07:46.134 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+2025-08-23 15:07:46.134 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:INTEGER) <- [5]
+2025-08-23 15:07:46.140 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        products 
+    set
+        category=?,
+        current_stock=?,
+        lead_time_days=?,
+        name=?,
+        reorder_threshold=? 
+    where
+        id=?
+2025-08-23 15:07:46.140 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Electronics]
+2025-08-23 15:07:46.140 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [20]
+2025-08-23 15:07:46.140 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:INTEGER) <- [7]
+2025-08-23 15:07:46.140 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Widget A]
+2025-08-23 15:07:46.140 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:INTEGER) <- [30]
+2025-08-23 15:07:46.140 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [2]
+2025-08-23 15:07:46.175 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.sale_date,
+        s1_0.product_id,
+        s1_0.quantity 
+    from
+        sales s1_0 
+    where
+        s1_0.product_id=? 
+        and s1_0.sale_date between ? and ?
+2025-08-23 15:07:46.175 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.175 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-16]
+2025-08-23 15:07:46.175 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:DATE) <- [2025-08-23]
+2025-08-23 15:07:46.181 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:07:46.181 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.181 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-24]
+2025-08-23 15:07:46.184 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    update
+        forecasts 
+    set
+        forecast_date=?,
+        expected_demand=?,
+        product_id=?,
+        projected_stock=? 
+    where
+        id=?
+2025-08-23 15:07:46.184 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:DATE) <- [2025-08-24]
+2025-08-23 15:07:46.184 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [13]
+2025-08-23 15:07:46.184 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [2]
+2025-08-23 15:07:46.184 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [7]
+2025-08-23 15:07:46.185 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [15]
+2025-08-23 15:07:46.185 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:07:46.185 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.185 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-25]
+2025-08-23 15:07:46.187 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:07:46.187 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.187 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-26]
+2025-08-23 15:07:46.189 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:07:46.189 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.189 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-27]
+2025-08-23 15:07:46.190 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:07:46.191 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.191 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-28]
+2025-08-23 15:07:46.192 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:07:46.192 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.192 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-29]
+2025-08-23 15:07:46.194 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    select
+        f1_0.id,
+        f1_0.forecast_date,
+        f1_0.expected_demand,
+        f1_0.product_id,
+        f1_0.projected_stock 
+    from
+        forecasts f1_0 
+    where
+        f1_0.product_id=? 
+        and f1_0.forecast_date=?
+2025-08-23 15:07:46.194 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+2025-08-23 15:07:46.194 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [2025-08-30]
+2025-08-23 15:07:46.215 DEBUG [http-nio-8080-exec-1] trace= user= org.hibernate.SQL - 
+    insert 
+    into
+        logs
+        (correlation_id, details, endpoint, event_type, timestamp, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-08-23 15:07:46.215 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [37c3b27f-532e-452e-8bda-83428645c7de]
+2025-08-23 15:07:46.215 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [Status: 201]
+2025-08-23 15:07:46.215 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [POST /api/sales]
+2025-08-23 15:07:46.215 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [API_RESPONSE]
+2025-08-23 15:07:46.215 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2025-08-23T15:07:46.214624400]
+2025-08-23 15:07:46.215 TRACE [http-nio-8080-exec-1] trace= user= org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [3]
+2025-08-23 15:13:32.287 INFO  [RMI TCP Connection(13)-127.0.0.1] trace= user= o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-08-23 15:13:32.289 INFO  [RMI TCP Connection(13)-127.0.0.1] trace= user= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-23 15:13:32.289 INFO  [tomcat-shutdown] trace= user= o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-08-23 15:13:32.492 INFO  [tomcat-shutdown] trace= user= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-23 15:13:32.493 INFO  [RMI TCP Connection(13)-127.0.0.1] trace= user= o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-08-23 15:13:32.506 INFO  [RMI TCP Connection(13)-127.0.0.1] trace= user= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-23 15:13:32.508 INFO  [RMI TCP Connection(13)-127.0.0.1] trace= user= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-23 15:13:32.511 INFO  [RMI TCP Connection(13)-127.0.0.1] trace= user= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

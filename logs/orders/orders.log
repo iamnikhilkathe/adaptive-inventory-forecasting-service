@@ -1,0 +1,1 @@
+2025-08-23 15:03:31.948 INFO  [http-nio-8080-exec-2] trace= user= biz.order - ORDER_CREATED id=2 productId=2 quantityOrdered=101 orderDate=2025-08-23 expectedArrival=2025-08-30 status=PENDING

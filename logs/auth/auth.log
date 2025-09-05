@@ -1,0 +1,9 @@
+2025-08-23 14:59:43.360 INFO  [http-nio-8080-exec-2] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
+2025-08-23 15:01:38.379 INFO  [http-nio-8080-exec-5] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
+2025-08-23 15:01:39.137 INFO  [http-nio-8080-exec-7] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
+2025-08-23 15:02:34.423 INFO  [http-nio-8080-exec-9] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
+2025-08-23 15:02:42.669 INFO  [http-nio-8080-exec-10] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
+2025-08-23 15:03:11.024 INFO  [http-nio-8080-exec-1] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
+2025-08-23 15:03:14.137 INFO  [http-nio-8080-exec-3] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
+2025-08-23 15:03:31.918 INFO  [http-nio-8080-exec-2] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
+2025-08-23 15:07:46.030 INFO  [http-nio-8080-exec-1] trace= user= biz.auth - AUTH_ATTEMPT username=nikhil ip=0:0:0:0:0:0:0:1 result=SUCCESS
